@@ -1,45 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My School</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArisKobar's Website</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav>
-        <img src="", alt="logo", class="logo">
-        <ul class="nav-items">
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Achievement</li>
-            <li>Massage Us</li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Hi Aris Kobar, Welcome to Our Website</h1>
-        <h4>Please Enjoy</h4>
-        <img src="assets/kobar.jpg">
-        <hr>
-    </header>
-    <div class="facilitations">
+
+<!--Nav Bar-->  
+    <div class="nav-container">
+        <div class="logo-box">
+          <a href="/">
+            <img src="assets/kobar.jpg">
+          </a>
+        </div>
+        <nav>
+        <ul>
+          <li><b><a href="#Home">HOME</a></b></li>
+          <li><b><a href="#profile">ABOUT ME</a></b></li>                             
+          <li><b><a href="#goal">LIFE GOAL</a></b></li>
+          <li><b><a href="#msgme">MESSAGE ME</a></b></li> 
+       </ul>
+      </nav>
+      </div>
+      <hr>
+
+<!--Home-->      
+    <header id="Home">
+        <h1>Hey <span id="namakamu"></span> !! Welcome to My Website</h1>
+        <h2>Let's Get To Know Me Better</h2>
+
+          <div class="mySlides fade">
+            <img src="assets/bangga.jpg" style="width:100%">
+          </div>
+          <br>
+          
+  <script src="js/script.js"></script>
+        </header>
+
+    <hr>
+
+    <!--Profile-->
+   <div class="profile">
+    <h1 style="text-align: center;" id="profile">ABOUT ME</h1>
+      
+    <h3 class="background">BACKGRUND</h3>
+      <li>Nama: Aris Martin Kobar</li> 
+      <li> Tanggal Lahir: 23 Mei 1998 di Kalimantan Tengah, Indonesia.</li>
+      <li>Lulusan Universitas Buana Perjuangan Karawang</li>
+
+    <h3 class="hobi">HOBBY</h3>
+    <li>Mempelajari Web Developing</li>
+    <li>Bermain Game</li>
+    <li>Bermain Sepak Bola</li>
+    <li>Work Out</li>
+    
+    <h3 class="dream">DREAM</h3>
+    <p class="main"><b> To Make My Parent Proud and Happy</b></p>
+    <p class="how">Dalam memwujudkan cita-cita tersebut, saya memilih jalan untuk menjadi Web Developer</p>
+      
+    <h3 class="Quote">Life Quote:</h3>
+    <p class="text"><b>"Lakukan dan Pertanggung Jawabkan</b>
+    
+   </div>
+   <hr>
+   
+
+<!--Proses-->
+    <h1 style="text-align: center;" id="goal">LIFE GOAL</h1>
+    <div class="goal">
         <div>
-            <div 
-            class="circle" 
-            style="background-image: url(assets/kobar.jpg);"></div>
-            <h4>Football Arena</h4>
+            <div class="circle" style="background-image: url('assets/Foto Lulus.jpg');"></div>
+            <h5>Telah Lulus dari Universitas Buana Perjuangan Karawang</h5>
         </div>
         <div>
-            <div class="circle"></div>
-            <h4>Auditorium</h4>
+            <div class="circle" style="background-image: url('assets/bangga.jpg');"></div>
+            <h5>Membanggakan Kedua Orang Tua</h5>
         </div>
         <div>
-            <div class="circle"></div>
-            <h4>Student Canteen</h4>
+            <div class="circle" style="background-image: url('assets/job.jpeg');"></div>
+            <h5>Menjadi Front-End Developer</h5>
         </div>
-
-
-
     </div>
+    <hr>
+
+    <!--Message Me-->
+    <div class="column">
+      <div>   
+          <h4 id="msgme">Message Me</h4>      
+              <label for="name">Nama :</label>
+              <input type="text" id="name" name="name"><br>
+              <label for="birthdate">Tanggal Lahir :</label>
+              <input type="date" id="birthdate" name="birthdate"><br>
+              <label for="gender">Jenis Kelamin :</label>
+              <input type="radio" id="laki" name="gender" value="Laki Laki" class="gender">
+              <label for="laki">Laki Laki</label>
+              <input type="radio" id="perempuan" name="gender" value="Perempuan" class="gender">
+              <label for="perempuan">Perempuan</label><br><br>
+              <label for="message">Pesan :</label>
+              <input type="textarea" id="message" name="message"><br>
+              <button id="submit" class="submit" onclick="getAll()">Submit</button>
+              <button id="reset" class="reset" onclick="resetAll()">Reset</button>
+          </div>
+        <div>
+          <div class="kotak">
+            <div class="Judul"> 
+              <h4 id="hasil">Result Form Message Me</h4>
+            </div>
+            <div>
+              <strong>Current Time : </strong> <span id="waktu"></span> <br><br>
+              <strong>Nama : </strong> <span id="nama"></span> <br><br>
+              <strong>Tanggal Lahir : </strong> <span id="lahir"></span> <br><br>
+              <strong>Jenis Kelamin : </strong> <span id="kelamin"></span> <br><br>
+              <strong>Pesan : </strong> <span id="pesan"></span> <br><br>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+   <script src="js/script.js"></script>
+   <hr>
+
+   <div id="footer">
+    <h4 class="copyright">Copyright &copy; ArisKobar</h4>
+    </div>
+   
 </body>
 </html>
